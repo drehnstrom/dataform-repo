@@ -1,0 +1,20 @@
+config {
+    type: "table",
+    database: "dsl-dar",
+    schema: "mpg_dataset",
+    name: "mpg_transformed"
+}
+
+SELECT
+  MPG,
+  Cylinders,
+  Displacement,
+  Horsepower,
+  Weight,
+  Acceleration,
+  Model_Year,
+  USA,
+  Europe,
+  Japan
+FROM
+  ${ref("mpg_transformed_view")}

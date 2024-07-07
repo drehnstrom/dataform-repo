@@ -1,0 +1,17 @@
+config {
+    type: "view",
+    database: "dsl-dar",
+    schema: "mpg_dataset",
+    name: "mpg_transformed_view"
+}
+
+SELECT
+  MPG, Cylinders, Displacement, Horsepower,
+  Weight, Acceleration, Model_Year,
+  if( Origin = 1, 1,0) AS USA,
+  if( Origin = 2, 1,0) AS Europe,
+  if( Origin = 3, 1,0) AS Japan
+FROM
+  ${ref("mpg_raw")}
+WHERE
+  Horsepower IS NOT NULL

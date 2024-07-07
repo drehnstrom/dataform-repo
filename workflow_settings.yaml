@@ -1,0 +1,5 @@
+defaultProject: dsl-dar
+defaultLocation: US
+defaultDataset: mpg_dataset
+defaultAssertionDataset: dataform_assertions
+dataformCoreVersion: 3.0.0-beta.4

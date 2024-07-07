@@ -1,0 +1,8 @@
+    config {
+      type: "declaration",
+      database: "dsl-dar",
+      schema: "mpg_dataset",
+      name: "mpg_raw",
+    }
+
+
